@@ -236,25 +236,33 @@ public class CancelOrder extends javax.swing.JFrame {
         
         int yes = JOptionPane.showConfirmDialog(null, "Do you want to delete the order?", "TENRYU", JOptionPane.YES_NO_OPTION);
         if(yes == JOptionPane.YES_OPTION){
-            for(int i=0; i<order.size(); i++){
-                if(jtfID.getText().equals(order.get(i).id.toString())){
-                    model.removeRow(i);
+                if(selectedIndex() != -1){
+                    model.removeRow(selectedIndex());
                     //JOptionPane.showMessageDialog(null, "Invalid ID", "ERROR", JOptionPane.ERROR_MESSAGE);
-                    //break;
+                    
                 }
-                /*else{
+                else{
                     JOptionPane.showMessageDialog(null, "Invalid ID", "ERROR", JOptionPane.ERROR_MESSAGE);
-                    break;
+                    //break;
                     //model.removeRow(i);
-                }*/
-                
-            }
+                }
         }
         else{
             jtfID.setText("");
         }
     }//GEN-LAST:event_jbtDeleteActionPerformed
 
+    private int selectedIndex(){
+        ArrayList<Order> order = OrderList();
+        int index = -1;
+        for(int i =0;i<order.size();i++){
+            if(jtfID.getText().equals(order.get(i).id.toString())){
+                index = i;
+            }
+        }
+        return index;
+    }
+    
     private void jtfCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCancelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfCancelActionPerformed
