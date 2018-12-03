@@ -239,7 +239,7 @@ public class SearchDelivery extends javax.swing.JFrame {
         Object rowData[] = new Object[7];
         model.setRowCount(0);
         
-        
+        for(int i = 0; i < list.size(); i++){
             if(jtfDate.getText().equals(list.get(i).date.toString())){
                 
                 rowData[0] = list.get(i).orderId;
@@ -267,7 +267,7 @@ public class SearchDelivery extends javax.swing.JFrame {
             else{
                 JOptionPane.showMessageDialog(null, "Wrong date format!", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        
+        }
     }//GEN-LAST:event_jbtSearchActionPerformed
 
     /**
