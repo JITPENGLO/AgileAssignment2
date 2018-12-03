@@ -6,6 +6,7 @@
 package agileassignment2;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -77,6 +78,18 @@ public class SearchDelivery extends javax.swing.JFrame {
             
             model.addRow(rowData);
         }
+    }
+    
+    public int selectedIndex(){
+        ArrayList<Delivery> list = DeliveryList();
+        int index = -1;
+        
+         for(int i = 0; i < list.size(); i++){
+             if(jtfDate.getText().equals(list.get(i).date.toString())){
+                 index = i;
+             }
+         }
+         return index;
     }
 
     /**
@@ -226,7 +239,7 @@ public class SearchDelivery extends javax.swing.JFrame {
         Object rowData[] = new Object[7];
         model.setRowCount(0);
         
-        for(int i = 0; i < list.size(); i++){
+        
             if(jtfDate.getText().equals(list.get(i).date.toString())){
                 
                 rowData[0] = list.get(i).orderId;
@@ -248,8 +261,13 @@ public class SearchDelivery extends javax.swing.JFrame {
                 rowData[6] = list.get(i).totalPrice;
                 
                 model.addRow(rowData);
+            }else if(!jtfDate.getText().equals(list.get(i).date.toString())){
+                JOptionPane.showMessageDialog(null, "No such date", "Error", JOptionPane.ERROR_MESSAGE);
             }
-        }
+            else{
+                JOptionPane.showMessageDialog(null, "Wrong date format!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        
     }//GEN-LAST:event_jbtSearchActionPerformed
 
     /**
