@@ -101,6 +101,7 @@ public class CancelOrder extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 0, 204));
 
+        jLabel2.setBackground(new java.awt.Color(255, 152, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Fiore Flowershop");
@@ -238,7 +239,7 @@ public class CancelOrder extends javax.swing.JFrame {
         if(yes == JOptionPane.YES_OPTION){
             for(int i=0; i<order.size(); i++){
                 if(jtfID.getText().equals(order.get(i).id.toString())){
-                    model.removeRow(i);
+                    model.removeRow(selectedIndex());
                     //JOptionPane.showMessageDialog(null, "Invalid ID", "ERROR", JOptionPane.ERROR_MESSAGE);
                     //break;
                 }
@@ -255,6 +256,18 @@ public class CancelOrder extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jbtDeleteActionPerformed
 
+    public int selectedIndex(){
+        ArrayList<Order> order = OrderList();
+        int index = -1;
+        
+        for(int i=0; i<order.size(); i++){
+            if(jtfID.getText().equals(order.get(i).id.toString())){
+                index = i;
+            }
+        }
+        return index;
+    }
+    
     private void jtfCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCancelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfCancelActionPerformed
