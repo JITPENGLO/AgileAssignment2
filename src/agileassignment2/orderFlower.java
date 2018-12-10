@@ -26,6 +26,7 @@ public class orderFlower extends javax.swing.JFrame {
         jtfTotal.setText(jtfPrice.getText());
     }
 
+    //to set the quantity from 1 to 100
     private void setQuantity(){
         for(int i = 1;i<=100;i++){
             jcbQty.addItem(i+"");
