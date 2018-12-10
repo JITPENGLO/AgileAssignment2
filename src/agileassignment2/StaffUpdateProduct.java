@@ -77,6 +77,35 @@ public void StoreTable(){
     }
 }
 
+    public void updateProduct(){
+        DefaultTableModel model = (DefaultTableModel) jtbProduct.getModel();
+       int index = jtbProduct.getSelectedRow();
+
+        int yes = JOptionPane.showConfirmDialog(null, "Do you want to update the current product?", "Update Product", JOptionPane.YES_NO_OPTION);
+        if(yes == JOptionPane.YES_OPTION){
+            
+                if(index >= 0){
+                      model.setValueAt(jtfProductID.getText(),index,0);
+                      model.setValueAt(jtfProductName.getText(), index, 1);
+                      model.setValueAt(jtfProductType.getText(),index,2);
+                      model.setValueAt(jtaDesc.getText(), index, 3);
+                      model.setValueAt(Double.parseDouble(jtfPrice.getText()), index,4);
+                      model.setValueAt(Integer.parseInt(jtfQuan.getText()), index, 5);
+                      model.setValueAt(jtfImage.getText(),index,6);
+                   
+                }
+            
+        }else if(yes == JOptionPane.NO_OPTION){
+            jtfProductID.setText("");
+            jtfProductName.setText("");
+            jtfProductType.setText("");
+            jtaDesc.setText("");
+            jtfPrice.setText("");
+            jtfQuan.setText("");
+            jtfImage.setText("");
+        }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -403,32 +432,9 @@ public void StoreTable(){
     }//GEN-LAST:event_jtfQuanActionPerformed
 
     private void jbtUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtUpdateActionPerformed
-        DefaultTableModel model = (DefaultTableModel) jtbProduct.getModel();
-       int index = jtbProduct.getSelectedRow();
-
-        int yes = JOptionPane.showConfirmDialog(null, "Do you want to update the current product?", "Update Product", JOptionPane.YES_NO_OPTION);
-        if(yes == JOptionPane.YES_OPTION){
-            
-                if(index >= 0){
-                      model.setValueAt(jtfProductID.getText(),index,0);
-                      model.setValueAt(jtfProductName.getText(), index, 1);
-                      model.setValueAt(jtfProductType.getText(),index,2);
-                      model.setValueAt(jtaDesc.getText(), index, 3);
-                      model.setValueAt(Double.parseDouble(jtfPrice.getText()), index,4);
-                      model.setValueAt(Integer.parseInt(jtfQuan.getText()), index, 5);
-                      model.setValueAt(jtfImage.getText(),index,6);
-                   
-                }
-            
-        }else if(yes == JOptionPane.NO_OPTION){
-            jtfProductID.setText("");
-            jtfProductName.setText("");
-            jtfProductType.setText("");
-            jtaDesc.setText("");
-            jtfPrice.setText("");
-            jtfQuan.setText("");
-            jtfImage.setText("");
-        }
+      
+        updateProduct();
+        
 
     }//GEN-LAST:event_jbtUpdateActionPerformed
 
