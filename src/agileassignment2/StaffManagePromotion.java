@@ -45,8 +45,8 @@ public class StaffManagePromotion extends javax.swing.JFrame {
 }
 public ArrayList PromotionList(){
     ArrayList<Promotion> list = new ArrayList<Promotion>();
-    Promotion p1 = new Promotion("PM001","Rose","Fresh Flowers","Collect on current day morning 100% pure and fresh");
-    Promotion p2 = new Promotion("PM002","Sun Flowers","Fresh Flowers","Collect on current day morning 100% pure and fresh");
+    Promotion p1 = new Promotion("PM001","Lucky November","Fresh Flowers","buy more than 3 items and show to staff at counter to get a free fresh flower");
+    Promotion p2 = new Promotion("PM002","Lucky Sunday","Fresh Flowers","buy more than 3 items and show to staff at counter to get a free fresh flower");
     
     list.add(p1);
     list.add(p2);
