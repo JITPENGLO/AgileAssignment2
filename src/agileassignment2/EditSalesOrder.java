@@ -383,14 +383,14 @@ public void AddStoreTable(){
     }//GEN-LAST:event_jtbProductMouseClicked
 
     
-    /*public void showDetail(){
+    public void showDetail(){
         //DefaultTableModel model = (DefaultTableModel) jtbProduct.getModel();
         ArrayList<orderList> list = new ArrayList<>();
         
         //Object rowData[] = new Object[6];
         
         for(int i=0; i<list.size(); i++){
-            if(jcbID.getSelectedItem().toString().equals(list.get(i).id.toString())){
+            if(jtfID.getText().equals(list.get(i).id.toString())){
                 jtaDesc.setText(list.get(i).desc.toString());
                 jtaDesc.setEditable(true);
                 jtfDate.setText(list.get(i).date.toString());
@@ -404,19 +404,19 @@ public void AddStoreTable(){
                 //model.addRow(rowData);
             }
         }
-    } */
+    } 
     
-    /*public int selectedIndex(){
-        ArrayList<EditSalesOrder.Product> Arraylist = ProductList();
+    public int selectedIndex(){
+        ArrayList<orderList> list = new ArrayList();
         int index = -1;
         
-        for(int i=0;i<Arraylist.size();i++){
-            if(jcbID.getSelectedItem().toString().equals(Arraylist.get(i).id.toString())){
+        for(int i=0;i<list.size();i++){
+            if(jtfID.getText().equals(list.get(i).id.toString())){
                 index = i;
             }
         }
         return index;
-    }*/
+    }
     /**
      * @param args the command line arguments
      */
