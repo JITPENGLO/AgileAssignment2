@@ -21,14 +21,14 @@ public class EditSalesOrder extends javax.swing.JFrame {
      */
     public EditSalesOrder() {
         initComponents();
-        StoreTable();
+        AddStoreTable();
     }
 
     public EditSalesOrder(ArrayList<orderList> getList){
         initComponents();
         list = getList;
         //getID();
-        StoreTable();
+        AddStoreTable();
     }
     
     /*private void getID(){
@@ -43,7 +43,7 @@ public ArrayList OrderListt(){
     list.add(ol);
     return list;
 }
-public void StoreTable(){
+public void AddStoreTable(){
        DefaultTableModel model = (DefaultTableModel) jtbProduct.getModel();
        //ArrayList<orderList> list = new ArrayList<orderList>();
        Object rowData[] = new Object[6];
