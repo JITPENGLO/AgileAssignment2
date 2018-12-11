@@ -13,29 +13,20 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author ASUS
  */
-public class EditSalesOrder extends javax.swing.JFrame {
-    //damn u mun kit
+
     private ArrayList<orderList> list = new ArrayList<orderList>();
     /**
      * Creates new form StaffDeleteProduct
      */
     public EditSalesOrder() {
         initComponents();
-        AddStoreTable();
     }
 
     public EditSalesOrder(ArrayList<orderList> getList){
         initComponents();
         list = getList;
-        //getID();
-        AddStoreTable();
+
     }
-    
-    /*private void getID(){
-        for(int i = 0;i<list.size();i++){
-            jcbID.addItem(list.get(i).id);
-        }
-    }*/
 
 public ArrayList OrderListt(){
     ArrayList<orderList> list = new ArrayList<orderList>();
@@ -43,22 +34,7 @@ public ArrayList OrderListt(){
     list.add(ol);
     return list;
 }
-public void AddStoreTable(){
-       DefaultTableModel model = (DefaultTableModel) jtbProduct.getModel();
-       //ArrayList<orderList> list = new ArrayList<orderList>();
-       Object rowData[] = new Object[6];
-       
-       for(int i =0;i< list.size();i++){
-           rowData[0] = list.get(i).id;
-           rowData[1] = list.get(i).desc;
-           rowData[2] = list.get(i).date;
-           rowData[3] = list.get(i).time;
-           rowData[4] = list.get(i).quantity;
-           rowData[5] = list.get(i).price;
-           
-           model.addRow(rowData);
-    }
-}
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -380,44 +356,8 @@ public void AddStoreTable(){
         jtfTime.setEditable(true);
         jtfQuan.setEditable(true);
         jtfPrice.setEditable(true);
-        //JOptionPane.showMessageDialog(null, "","",JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_jtbProductMouseClicked
 
-    /*
-    public void showDetail(){
-        //DefaultTableModel model = (DefaultTableModel) jtbProduct.getModel();
-        ArrayList<orderList> list = new ArrayList<>();
-        
-        //Object rowData[] = new Object[6];
-        
-        for(int i=0; i<list.size(); i++){
-            if(jtfID.getText().equals(list.get(i).ID.toString())){
-                jtaDesc.setText(list.get(i).desc.toString());
-                jtaDesc.setEditable(true);
-                jtfDate.setText(list.get(i).date.toString());
-                jtfDate.setEditable(true);
-                jtfTime.setText(list.get(i).time.toString());
-                jtfTime.setEditable(true);
-                jtfQuan.setText(""+ list.get(i).quantity);
-                jtfQuan.setEditable(true);
-                jtfPrice.setText(""+ list.get(i).price);
-                jtfPrice.setEditable(true);
-                //model.addRow(rowData);
-            }
-        }
-    } 
-    
-    public int selectedIndex(){
-        ArrayList<orderList> list = new ArrayList();
-        int index = -1;
-        
-        for(int i=0;i<list.size();i++){
-            if(jtfID.getText().equals(list.get(i).ID.toString())){
-                index = i;
-            }
-        }
-        return index;
-    }*/
+
     /**
      * @param args the command line arguments
      */

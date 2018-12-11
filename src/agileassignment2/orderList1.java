@@ -7,16 +7,32 @@ package agileassignment2;
 
 /**
  *
-
+ * @author User
  */
-public class orderList {
+public class orderList1 {
     public String id;
     public String desc;
     public String date;
     public String time;
     public int quantity;
     public double price;
+    
+    public orderList1(String id,String desc,String date, String time,int quantity, double price){
+        this.id = id;
+        this.desc = desc;
+        this.date = date;
+        this.time = time;
+        this.quantity = quantity;
+        this.price = price;
+    }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getDesc() {
         return desc;
@@ -57,5 +73,6 @@ public class orderList {
     public void setPrice(double price) {
         this.price = price;
     }
-
+    
+    
 }
