@@ -23,7 +23,7 @@ public class AddSalesOrder extends javax.swing.JFrame {
         initComponents();
         StoreTable();
     }
-
+//how are you?
 public ArrayList OrderListt(){
     ArrayList<orderList> list = new ArrayList<orderList>();
     
