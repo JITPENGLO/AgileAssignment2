@@ -10,19 +10,19 @@ package agileassignment2;
  * @author Student
  */
 public class orderList {
-    public String ID;
+    public String id;
     public String desc;
     public String date;
     public String time;
     public int quantity;
     public double price;
 
-    public String getID() {
-        return ID;
+    public String getid() {
+        return id;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setID(String id) {
+        this.id = id;
     }
 
     public String getDesc() {
@@ -65,8 +65,8 @@ public class orderList {
         this.price = price;
     }
 
-    public orderList(String ID, String desc, String date, String time, int quantity, double price) {
-        this.ID = ID;
+    public orderList(String id, String desc, String date, String time, int quantity, double price) {
+        this.id = id;
         this.desc = desc;
         this.date = date;
         this.time = time;
