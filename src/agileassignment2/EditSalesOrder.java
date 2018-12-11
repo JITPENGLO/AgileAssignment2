@@ -49,7 +49,7 @@ public void AddStoreTable(){
        Object rowData[] = new Object[6];
        
        for(int i =0;i< list.size();i++){
-           rowData[0] = list.get(i).id;
+           rowData[0] = list.get(i).ID;
            rowData[1] = list.get(i).desc;
            rowData[2] = list.get(i).date;
            rowData[3] = list.get(i).time;
@@ -380,9 +380,10 @@ public void AddStoreTable(){
         jtfTime.setEditable(true);
         jtfQuan.setEditable(true);
         jtfPrice.setEditable(true);
+        //JOptionPane.showMessageDialog(null, "","",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jtbProductMouseClicked
 
-    
+    /*
     public void showDetail(){
         //DefaultTableModel model = (DefaultTableModel) jtbProduct.getModel();
         ArrayList<orderList> list = new ArrayList<>();
@@ -390,7 +391,7 @@ public void AddStoreTable(){
         //Object rowData[] = new Object[6];
         
         for(int i=0; i<list.size(); i++){
-            if(jtfID.getText().equals(list.get(i).id.toString())){
+            if(jtfID.getText().equals(list.get(i).ID.toString())){
                 jtaDesc.setText(list.get(i).desc.toString());
                 jtaDesc.setEditable(true);
                 jtfDate.setText(list.get(i).date.toString());
@@ -411,12 +412,12 @@ public void AddStoreTable(){
         int index = -1;
         
         for(int i=0;i<list.size();i++){
-            if(jtfID.getText().equals(list.get(i).id.toString())){
+            if(jtfID.getText().equals(list.get(i).ID.toString())){
                 index = i;
             }
         }
         return index;
-    }
+    }*/
     /**
      * @param args the command line arguments
      */
